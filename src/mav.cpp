@@ -11,11 +11,11 @@
 
 int main(int argc, char **argv)
 {
-    if (argc == 1)
-    {
-        printf("Must provide at least 1 argument to mav.");
-        return 1;
-    }
+//    if (argc == 1)
+//    {
+//        printf("Must provide at least 1 argument to mav.");
+//        return 1;
+//    }
 
     for (int i = 0; i < 0; i++)
     {

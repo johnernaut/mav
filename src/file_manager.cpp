@@ -17,14 +17,13 @@ FileManager::FileManager()
     }
 
     _rootDir = currentPath;
-    printf("Current path: %s\n", _rootDir);
 }
 
 void FileManager::addFileStructure()
 {
     DIR *dir;
     struct dirent *ent;
-    if ((dir = opendir(_rootDir)) != NULL)
+    if ((dir = opendir(_rootDir.c_str())) != NULL)
     {
         while ((ent = readdir(dir)) != NULL)
         {
@@ -33,7 +32,7 @@ void FileManager::addFileStructure()
 
             if (ent->d_type == DT_DIR)
             {
-                printf("Dir: \t%s\n", ent->d_name);
+                //printf("Dir: \t%s\n", ent->d_name);
             }
             else
             {
